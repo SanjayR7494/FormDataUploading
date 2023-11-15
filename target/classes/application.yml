@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/multifileuploadlist
+    password: sanjaydb
+  jpa:
+    hibernate:
+      ddl-auto: update
+  file:
+    path: /home/assistanz/checking/
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  
+logging:
+  level:
+    root: WARN 
+  file:
+    name: fileuploadlog
+    path:  /home/assistanz/
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+
+
+
